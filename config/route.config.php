@@ -7,7 +7,7 @@ use ZfPhinx\Controller\PhinxController;
 return [
     'test' => [
         'options' => [
-            'route'    => 'ZfPhinx test [-v|-vv|-vvv] [-q] [-n] -e ENVIRONMENT',
+            'route'    => 'zfphinx test [-v|-vv|-vvv] [-q] [-n] -e ENVIRONMENT',
             'defaults' => [
                 'controller' => PhinxController::class,
                 'action'     => 'test',
@@ -16,7 +16,7 @@ return [
     ],
     'create' => [
         'options' => [
-            'route'    => 'ZfPhinx create [-v|-vv|-vvv] [-q] [-n] [-t] [-l] MIGRATION',
+            'route'    => 'zfphinx create [-v|-vv|-vvv] [-q] [-n] [-t] [-l] MIGRATION',
             'defaults' => [
                 'controller' => PhinxController::class,
                 'action'     => 'create',
@@ -25,7 +25,7 @@ return [
     ],
     'migrate' => [
         'options' => [
-            'route'    => 'ZfPhinx migrate [-v|-vv|-vvv] [-q] [-n] [-t] [-d] -e ENVIRONMENT',
+            'route'    => 'zfphinx migrate [-v|-vv|-vvv] [-q] [-n] [-t] [-d] -e ENVIRONMENT',
             'defaults' => [
                 'controller' => PhinxController::class,
                 'action'     => 'migrate',
@@ -34,7 +34,7 @@ return [
     ],
     'rollback' => [
         'options' => [
-            'route'    => 'ZfPhinx rollback [-v|-vv|-vvv] [-q] [-n] [-t] [-d] -e ENVIRONMENT',
+            'route'    => 'zfphinx rollback [-v|-vv|-vvv] [-q] [-n] [-t] [-d] -e ENVIRONMENT',
             'defaults' => [
                 'controller' => PhinxController::class,
                 'action'     => 'rollback',
@@ -43,7 +43,7 @@ return [
     ],
     'status' => [
         'options' => [
-            'route'    => 'ZfPhinx status [-v|-vv|-vvv] [-q] [-n] [-f] -e ENVIRONMENT',
+            'route'    => 'zfphinx status [-v|-vv|-vvv] [-q] [-n] [-f] -e ENVIRONMENT',
             'defaults' => [
                 'controller' => PhinxController::class,
                 'action'     => 'status',

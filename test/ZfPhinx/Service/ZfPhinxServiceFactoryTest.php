@@ -6,7 +6,6 @@ use Interop\Container\ContainerInterface;
 use Zend\Db\Adapter\AdapterInterface;
 use Zend\Db\Adapter\Driver\ConnectionInterface;
 use Zend\Db\Adapter\Driver\DriverInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 use ZfPhinx\Service\Exception\RuntimeException;
 
 /**
@@ -54,7 +53,7 @@ class ZfPhinxServiceFactoryTest extends \PHPUnit_Framework_TestCase
             ->will(
                 $this->returnValueMap(
                     [
-                        ['Config', ['ZfPhinx' => ['environments' => ['test' => ['db_adapter' => 'AdapterName']]]]],
+                        ['Config', ['zfphinx' => ['environments' => ['test' => ['db_adapter' => 'AdapterName']]]]],
                         ['AdapterName', $dbAdapterMock],
                     ]
                 )
@@ -88,7 +87,7 @@ class ZfPhinxServiceFactoryTest extends \PHPUnit_Framework_TestCase
 
         $this->setExpectedException(
             RuntimeException::class,
-            'ZfPhinx config is not found'
+            'zfphinx config is not found'
         );
 
         $factory = new ZfPhinxServiceFactory();
@@ -108,11 +107,11 @@ class ZfPhinxServiceFactoryTest extends \PHPUnit_Framework_TestCase
             ->expects($this->once())
             ->method('get')
             ->with('Config')
-            ->willReturn(['ZfPhinx' => []]);
+            ->willReturn(['zfphinx' => []]);
 
         $this->setExpectedException(
             RuntimeException::class,
-            'ZfPhinx environment config is not found'
+            'zfphinx environment config is not found'
         );
 
         $factory = new ZfPhinxServiceFactory();
@@ -132,7 +131,7 @@ class ZfPhinxServiceFactoryTest extends \PHPUnit_Framework_TestCase
             ->expects($this->once())
             ->method('get')
             ->with('Config')
-            ->willReturn(['ZfPhinx' => ['environments' => ['test' => ['db_adapter' => $this->anything()]]]]);
+            ->willReturn(['zfphinx' => ['environments' => ['test' => ['db_adapter' => $this->anything()]]]]);
 
         $this->setExpectedException(
             RuntimeException::class,
@@ -158,7 +157,7 @@ class ZfPhinxServiceFactoryTest extends \PHPUnit_Framework_TestCase
             ->will(
                 $this->returnValueMap(
                     [
-                        ['Config', ['ZfPhinx' => ['environments' => ['test' => ['db_adapter' => 'AdapterName']]]]],
+                        ['Config', ['zfphinx' => ['environments' => ['test' => ['db_adapter' => 'AdapterName']]]]],
                         ['AdapterName', $this->anything()],
                     ]
                 )

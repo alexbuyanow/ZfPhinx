@@ -12,8 +12,6 @@ use Interop\Container\ContainerInterface;
  */
 class ZfPhinxServiceFactory
 {
-    use ServiceLocatorProviderTrait;
-
     /**
      * @param  ContainerInterface $container
      * @return ZfPhinxService
@@ -48,11 +46,11 @@ class ZfPhinxServiceFactory
     {
         $config = $container->get('Config');
 
-        if (!(array_key_exists('ZfPhinx', $config) && is_array($config['ZfPhinx']))) {
-            throw new Exception\RuntimeException('ZfPhinx config is not found');
+        if (!(array_key_exists('zfphinx', $config) && is_array($config['zfphinx']))) {
+            throw new Exception\RuntimeException('zfphinx config is not found');
         }
 
-        return new Config($this->performConfig($container, $config['ZfPhinx']));
+        return new Config($this->performConfig($container, $config['zfphinx']));
     }
 
     /**
@@ -65,7 +63,7 @@ class ZfPhinxServiceFactory
     private function performConfig(ContainerInterface $container, array $config)
     {
         if (!(array_key_exists('environments', $config) && is_array($config['environments']))) {
-            throw new Exception\RuntimeException('ZfPhinx environment config is not found');
+            throw new Exception\RuntimeException('zfphinx environment config is not found');
         }
 
         array_walk(

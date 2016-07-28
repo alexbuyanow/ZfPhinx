@@ -3,7 +3,6 @@
 namespace ZfPhinx\Controller;
 
 use Interop\Container\ContainerInterface;
-use ZfPhinx\Service\ServiceLocatorProviderTrait;
 use ZfPhinx\Service\ZfPhinxService;
 
 /**
@@ -11,8 +10,6 @@ use ZfPhinx\Service\ZfPhinxService;
  */
 class PhinxControllerFactory
 {
-    use ServiceLocatorProviderTrait;
-
     /**
      * @param  ContainerInterface $container
      * @return PhinxController

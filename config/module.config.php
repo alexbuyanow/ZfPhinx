@@ -26,7 +26,7 @@ return [
         ],
     ],
 
-    'ZfPhinx' => [
+    'zfphinx' => [
         'paths' => [
             'migrations' => '',
             'seeds'      => '',
