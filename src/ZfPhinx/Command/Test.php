@@ -28,8 +28,10 @@ class Test extends TestPrototype
         $this->verifyMigrationDirectory($this->getConfig()->getMigrationPath());
 
         $envName = $input->getOption('environment');
-        if ($envName) {
-            if (!$this->getConfig()->hasEnvironment($envName)) {
+        if($envName)
+        {
+            if(!$this->getConfig()->hasEnvironment($envName))
+            {
                 throw new \InvalidArgumentException(sprintf(
                     'The environment "%s" does not exist',
                     $envName

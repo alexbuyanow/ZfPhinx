@@ -46,7 +46,7 @@ class Module implements
      */
     public function getConfig()
     {
-        return include __DIR__.'/../../config/module.config.php';
+        return include __DIR__ . '/../../config/module.config.php';
     }
 
     /**
@@ -59,7 +59,7 @@ class Module implements
         return [
             'Zend\Loader\StandardAutoloader' => [
                 'namespaces' => [
-                    __NAMESPACE__ => __DIR__.'/src/'.__NAMESPACE__,
+                    __NAMESPACE__ => __DIR__ . '/src/'.__NAMESPACE__,
                 ],
             ],
         ];
@@ -75,14 +75,14 @@ class Module implements
     {
         return [
             'Common command flags',
-            ['-q',        'Do not output any message'],
-            ['-n',        'Do not ask any interactive question'],
+            ['-q', 'Do not output any message'],
+            ['-n', 'Do not ask any interactive question'],
             ['-v|vv|vvv', 'Verbosity of messages: normal|more verbose|debug'],
             'Commands',
             'ZfPhinx create [-t TEMPLATE] [-l CLASS] MIGRATION' => 'Create a new migration',
             ['-t TEMPLATE', 'Use an alternative template'],
-            ['-l CLASS',    'Use a class implementing "Phinx\Migration\CreationInterface" to generate the template'],
-            ['MIGRATION',   'Unique migration name'],
+            ['-l CLASS', 'Use a class implementing "Phinx\Migration\CreationInterface" to generate the template'],
+            ['MIGRATION', 'Unique migration name'],
             'ZfPhinx migrate [-t TARGET] [-d DATE] -e ENVIRONMENT' => 'Migrate the database',
             ['-t TARGET', 'The version number to migrate to. Format: YYYYMMDDHHMMSS'],
             ['-d DATE', 'The date to migrate to. Format: YYYYMMDD'],
@@ -107,6 +107,6 @@ class Module implements
      */
     public function getConsoleBanner(Console $console)
     {
-        return self::MODULE_NAME.' '.self::MODULE_VERSION;
+        return self::MODULE_NAME . ' ' . self::MODULE_VERSION;
     }
 }
