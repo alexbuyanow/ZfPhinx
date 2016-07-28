@@ -10,7 +10,7 @@ use ZfPhinx\Service\ZfPhinxServiceFactory;
 return [
     'console' => [
         'router' => [
-            'routes' => require __DIR__.'/route.config.php',
+            'routes' => require __DIR__ . '/route.config.php',
         ],
     ],
 
