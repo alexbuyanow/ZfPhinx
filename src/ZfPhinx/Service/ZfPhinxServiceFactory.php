@@ -57,7 +57,7 @@ class ZfPhinxServiceFactory
      * Performs config array from ZF to Phinx structure
      *
      * @param  ContainerInterface $container
-     * @param  array                   $config
+     * @param  array              $config
      * @return array
      */
     private function performConfig(ContainerInterface $container, array $config)

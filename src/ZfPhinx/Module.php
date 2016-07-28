@@ -26,13 +26,19 @@ class Module implements
     const MODULE_NAME    = 'ZfPhinx';
     const MODULE_VERSION = '0.1.0';
 
+    /**
+     * Init event manager
+     *
+     * @param  MvcEvent $event
+     * @return void
+     */
     public function onBootstrap(MvcEvent $event)
     {
         $eventManager = $event->getApplication()->getServiceManager()->get(SendResponseListener::class)->getEventManager();
         /** @var EventManagerInterface $eventManager */
         $eventManager->attach(SendResponseEvent::EVENT_SEND_RESPONSE, new ConsoleResponseSender(), -2000);
     }
-    
+
     /**
      * Returns configuration to merge with application configuration
      *
