@@ -99,10 +99,7 @@ class PhinxController extends AbstractConsoleController
      */
     private function getArgvArray()
     {
-        $argvArray = $_SERVER['argv'];
-        array_shift($argvArray);
-
-        return $argvArray;
+        return (array) $this->getRequest()->getContent();
     }
 
     /**
