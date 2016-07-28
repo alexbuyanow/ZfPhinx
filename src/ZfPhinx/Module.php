@@ -83,8 +83,6 @@ class Module implements
             ['-t TEMPLATE', 'Use an alternative template'],
             ['-l CLASS',    'Use a class implementing "Phinx\Migration\CreationInterface" to generate the template'],
             ['MIGRATION',   'Unique migration name'],
-//            'help         Displays help for a command',
-//            'list         Lists commands',
             'ZfPhinx migrate [-t TARGET] [-d DATE] -e ENVIRONMENT' => 'Migrate the database',
             ['-t TARGET', 'The version number to migrate to. Format: YYYYMMDDHHMMSS'],
             ['-d DATE', 'The date to migrate to. Format: YYYYMMDD'],
