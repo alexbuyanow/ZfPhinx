@@ -1,13 +1,13 @@
 # ZfPhinx
 
-ZF2 module, integrated [Phinx](https://github.com/robmorgan/phinx)
+ZF3 module, integrated [Phinx](https://github.com/robmorgan/phinx)
 
 [Phinx](https://phinx.org/) is easy database migration manager
 
 ## Dependencies
 
-+ [PHP >= 5.5](https://php.net)
-+ [Zend Framework >= 2.3](http://framework.zend.com/),
++ [PHP >= 5.6](https://php.net)
++ [Zend Framework >= 3](http://framework.zend.com/),
 + [Phinx >= 0.6.0](https://phinx.org/),
 
 ## Installation
