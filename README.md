@@ -21,7 +21,7 @@ ZF3 module, integrated [Phinx](https://github.com/robmorgan/phinx)
 1. Require ZfPhinx as a dependency using Composer:
 
 ```
-    php composer.phar require alexbuyanow/ZfPhinx
+    php composer.phar require alexbuyanow/zfphinx
 ```
 
 1. Install Phinx:
@@ -38,10 +38,10 @@ ZF3 module, integrated [Phinx](https://github.com/robmorgan/phinx)
 
 ## Configuration
 
-Configure 'ZfPhinx' section in your application config
+Configure 'zfphinx' section in your application config
 
 ```
-    'ZfPhinx' => [
+    'zfphinx' => [
         'paths' => [
             'migrations' => '<path to your migration directory>',
             'seeds'      => '<path to your seed directory>',
@@ -66,11 +66,11 @@ Configure 'ZfPhinx' section in your application config
 Basic usage via console (from your project root)
 
 ```
-    php public/index.php ZfPhinx <command> <flags>
+    php public/index.php zfphinx <command> <flags>
 ```
 
 List of available commands
  
  ```
-     php public/index.php ZfPhinx
+     php public/index.php zfphinx
  ```

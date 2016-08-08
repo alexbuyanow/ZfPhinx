@@ -25,7 +25,7 @@ class Module implements
     ConsoleBannerProviderInterface
 {
     const MODULE_NAME    = 'ZfPhinx';
-    const MODULE_VERSION = '0.1.0';
+    const MODULE_VERSION = '0.1.1';
 
     /**
      * Init event manager
