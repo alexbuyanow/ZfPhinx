@@ -28,8 +28,8 @@ return [
 
     'zfphinx' => [
         'paths' => [
-            'migrations' => '',
-            'seeds'      => '',
+            'migrations' => [],
+            'seeds'      => [],
         ],
 
         'environments' => [
