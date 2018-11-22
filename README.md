@@ -1,5 +1,9 @@
 # ZfPhinx
 
+[![Build Status](https://scrutinizer-ci.com/g/alexbuyanow/ZfPhinx/badges/build.png?b=master)](https://scrutinizer-ci.com/g/alexbuyanow/ZfPhinx/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/alexbuyanow/ZfPhinx/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/alexbuyanow/ZfPhinx/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/alexbuyanow/ZfPhinx/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/alexbuyanow/ZfPhinx/?branch=master)
+
 ZF3 module, integrated [Phinx](https://github.com/robmorgan/phinx)
 
 [Phinx](https://phinx.org/) is easy database migration manager
