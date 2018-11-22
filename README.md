@@ -12,7 +12,7 @@ ZF3 module, integrated [Phinx](https://github.com/robmorgan/phinx)
 
 + [PHP >= 5.6](https://php.net)
 + [Zend Framework >= 3](http://framework.zend.com/),
-+ [Phinx >= 0.6.0](https://phinx.org/),
++ [Phinx >= 0.7.0](https://phinx.org/),
 
 ## Installation
 
