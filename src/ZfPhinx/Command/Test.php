@@ -25,7 +25,10 @@ class Test extends TestPrototype
     {
         $this->loadManager($input, $output);
 
-        $this->verifyMigrationDirectory($this->getConfig()->getMigrationPath());
+        $migrationsPaths = (array) $this->getConfig()->getMigrationPaths();
+        foreach ($migrationsPaths as $path) {
+            $this->verifyMigrationDirectory($path);
+        }
 
         $envName = $input->getOption('environment');
         if($envName)
