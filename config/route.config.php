@@ -25,7 +25,7 @@ return [
     ],
     'migrate' => [
         'options' => [
-            'route'    => 'zfphinx migrate [-v|-vv|-vvv] [-q] [-n] [--target=] [--date=] [--environment=]',
+            'route'    => 'zfphinx migrate [-v|-vv|-vvv] [-q] [-n] [--target=] [--date=] [--environment=] [--dry-run]',
             'defaults' => [
                 'controller' => PhinxController::class,
                 'action'     => 'migrate',
@@ -34,7 +34,7 @@ return [
     ],
     'rollback' => [
         'options' => [
-            'route'    => 'zfphinx rollback [-v|-vv|-vvv] [-q] [-n] [--target=] [--date=] [--environment=]',
+            'route'    => 'zfphinx rollback [-v|-vv|-vvv] [-q] [-n] [--target=] [--date=] [--environment=] [--dry-run]',
             'defaults' => [
                 'controller' => PhinxController::class,
                 'action'     => 'rollback',
